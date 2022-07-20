@@ -1,0 +1,23 @@
+services:
+  fastapi:
+    public: true
+    image: jonathanpaucar/website:latest
+    build: .
+    replicas: 1
+    ports:
+      - 8080:8080
+    environment:
+      - DB_HOST=postgres://pguser:pgpass@postgres:5432/pgdb
+      - secret=dev
+  postgresql:
+    image: bitnami/postgresql:latest
+    ports:
+      - 5432
+    environment:
+      - POSTGRES_USER=pguser
+      - POSTGRES_PASSWORD=pgpass
+      - POSTGRES_DB=pgdb
+    volumes:
+      - data:/bitnami/postgresql
+volumes:
+  data:
