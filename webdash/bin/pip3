@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/jonathanpaucar/Library/Mobile Documents/com~apple~CloudDocs/Documents/Rutgers/2022 - 06 Summer/webdash/bin/python3" "$0" "$@"
-' '''
+#!/Users/jonathanpaucar/Documents/Rutgers/2022-06Summer/Website/webdash/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
