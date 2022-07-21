@@ -37,5 +37,4 @@ pd.DataFrame.from_records(x,columns=['Player','Fieldposition','Team','Salary'])
     dfteam=dfteam.sort_values('Salary',ascending=False).head(10)
     fig10=px.bar(dfteam,x='Team', y='Salary',title='Top 10 Paying Teams')
     team10=fig10.to_html(full_html=False, include_plotlyjs='cdn')
-    return templates.TemplateResponse("chart.html", {"request":
-request,"top10":top10,"team10":team10})
+    return templates.TemplateResponse("chart.html", {"request":request,"top10":top10,"team10":team10})
