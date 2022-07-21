@@ -1,11 +1,19 @@
 <html>
 <head>
     <title>NFL Web Dashboard</title>
-
+    <link href="{{url_for('static', path='/style.css')}}" rel="stylesheet">
 <head>
 <body>
-    <h1>Chart</h1>
-    {{top10|safe}}
-    {{team10|safe}}
+<h1>Chart</h1>
+
+<div class="container">
+    <div class="item"></div>
+    <div class="item">{{top10|safe}}</div>
+    <div class="item">{{team10|safe}}</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+
   </body>
 </html>
