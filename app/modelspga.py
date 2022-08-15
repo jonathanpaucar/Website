@@ -2,7 +2,7 @@ from sqlalchemy import Column, Float, String, Integer, Numeric
 from .database import Base
 
 class pga(Base):
-    __tablename__ = "pga"
+    __tablename__ = "pga_stats"
     player = Column(String, unique=True, index=True)
     numofrounds = Column(Integer)
     avgapproach = Column(Integer)
