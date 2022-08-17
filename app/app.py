@@ -26,7 +26,7 @@ def get_db():
 
 @app.get("/")
 async def welcome(request: Request, db: Session=Depends(get_db)):
-    x=crudpga.get_totalapproach(db)
+    x=crudpga.get_pgastats(db)
     df = pd.DataFrame.from_records(x,columns=['Player','numofrounds','avgapproach','totalapproach','pergreensinreg','greenshitinreg','numholes'])
     px.defaults.width = 266
     px.defaults.height = 200
